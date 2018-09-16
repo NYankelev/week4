@@ -40,4 +40,4 @@ combined_df <- rbind(training_full, test_full)
 tidy_df <- group_by(combined_df, subject, activity) %>%
 summarize_all(mean)
     
-
+write.table(tidy_df, "Nathaniel.txt", row.names = FALSE)
